@@ -6,12 +6,15 @@ SSH into your Raspberry Pi from anywhere with just one command!
 You must have a Weaved account and your Pi's SSH port connected and up with Weaved.
 
 Clone this repo and cd into it:
+
 `git clone https://github.com/Ritiek/One-Liner-SSH-To-Raspberry-Pi`
+
 `cd One-Liner-SSH-To-Raspberry-Pi`
 
 Now just add your weaved email, pass and your pi's UID in `sshpi.py`.
 
 You can find your UID by logging into Weaved and opening your SSH service, you will find a URL like https://developer.weaved.com/portal/members/viewerPage.php?id=00:00:00:01:00:00:A1:1A&type=00:1C:00:00:00:01:00:00:01:10:00:11:00:00:00:00&name=U1NIIFRlcm1pbmGd appear.
+
 Here `00:00:00:01:00:00:A1:1A` is your UID
 
 Now just run the Python script:
