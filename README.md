@@ -1,6 +1,7 @@
 # One-Liner-SSH-To-Raspberry-Pi
 
-SSH into your Raspberry Pi from anywhere with just one command!
+SSH into your Raspberry Pi from anywhere with just one command
+
 Adapted from http://docs.weaved.com/docs/userlogin and http://docs.weaved.com/docs/deviceconnect
 
 ## Pre-requisites & Usage:
