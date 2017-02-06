@@ -22,7 +22,7 @@ apiKey="WeavedDemoKey$2015"
 userName = "weaved_email"
 password = "weaved_pass"
 # replace this with the actual UID of your Raspberry Pi
-UID="raspberry_mac"
+UID = "raspberry_UID"
 #--------------------------------------------------------------
 
 def proxyConnect(UID, token):
