@@ -21,4 +21,10 @@ Now just run the Python script:
 
 `sudo python sshpi.py`
 
-It will SSH into your Pi.
+It will automatically SSH into your Pi after fetching for Weaved's forwarded SSH port.
+
+## How it Works?
+
+It just makes use of the Weaved API to fetch for their forwarded SSH Port.
+
+More info on their API here http://docs.weaved.com/
