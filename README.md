@@ -8,6 +8,10 @@ Adapted from http://docs.weaved.com/docs/userlogin and http://docs.weaved.com/do
 
 You must have a Weaved account and your Pi's SSH port connected and up with Weaved.
 
+You will need httplib2:
+
+`sudo pip install httplib2`
+
 Clone this repo and cd into it:
 
 ```
