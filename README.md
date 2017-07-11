@@ -51,10 +51,10 @@ python sshpi.py
 ```
 
 
-It will automatically SSH into your Pi after fetching for Weaved's forwarded SSH port.
+It will automatically SSH into your Pi after generating a token and fetching Weaved's forwarded SSH port.
 
-## How it Works?
+## How it works?
 
-It just makes use of the Weaved API to generate a token and fetch for their forwarded SSH Port.
+It just makes use of the Weaved API.
 
 More info on their API here http://docs.weaved.com/
