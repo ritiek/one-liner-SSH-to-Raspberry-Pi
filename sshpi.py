@@ -12,17 +12,17 @@ import os
 import time
 import socket
 
-apiMethod="https://"
-apiServer="api.weaved.com"
-apiVersion="/v22"
-apiKey="WeavedDemoKey$2015"
+apiMethod = "https://"
+apiServer = "api.weaved.com"
+apiVersion = "/v22"
+apiKey = "WeavedDemoKey$2015"
 
 # -------------------------------------------------------------
 # replace the below with your weaved username & password
-userName = "weaved_email"
-password = "weaved_pass"
+EMAIL = "weaved_email"
+PASS = "weaved_pass"
 # replace this with the actual UID of your Raspberry Pi
-UID = "raspberry_UID"
+PI_UID = "raspberry_UID"
 #--------------------------------------------------------------
 
 def proxyConnect(UID, token):
@@ -30,7 +30,7 @@ def proxyConnect(UID, token):
     http                    = httplib2.Http()
     content_type_header     = "application/json"
 
-    my_ip = urlopen('http://ip.42.pl/raw').read()
+    my_ip = urlopen('http://ipinfo.io/ip/').read()
     proxyConnectURL = apiMethod + apiServer + apiVersion + "/api/device/connect"
 
     proxyHeaders = {
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     httplib2.debuglevel     = 0
     http                    = httplib2.Http()
     content_type_header     = "application/json"
- 
+
     loginURL = apiMethod + apiServer + apiVersion + "/api/user/login"
 
     loginHeaders = {
@@ -69,7 +69,7 @@ if __name__ == '__main__':
                 'apikey': apiKey
             }
     try:
-        response, content = http.request( loginURL + "/" + userName + "/" + password,
+        response, content = http.request( loginURL + "/" + EMAIL + "/" + PASS,
                                           'GET',
                                           headers=loginHeaders)
     except:
@@ -86,8 +86,8 @@ if __name__ == '__main__':
     except KeyError:
         print "Connection failed!"
 
-    host = proxyConnect(UID, token)
-    trim = host.find(':')
-    ip = host[:trim]
-    port = host[trim+1:]
-    os.system('ssh ' + ip + ' -p ' + port)
+    host = proxyConnect(PI_UID, token)
+    trim = host.split(':')
+    ip = trim[0]
+    port = trim[1]
+    os.system('ssh pi@' + ip + ' -p ' + port)
