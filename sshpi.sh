@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # -------------------------------------------------------------
 # replace the below with your weaved username & password
