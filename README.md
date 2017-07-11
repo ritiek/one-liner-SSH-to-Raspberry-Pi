@@ -1,8 +1,8 @@
 # one-liner-SSH-to-Raspberry-Pi
 
-SSH into your Raspberry Pi from anywhere with just one command
+SSH into your Raspberry Pi from anywhere with just one command.
 
-Adapted from http://docs.weaved.com/docs/userlogin and http://docs.weaved.com/docs/deviceconnect
+Adapted from http://docs.weaved.com/docs/userlogin and http://docs.weaved.com/docs/deviceconnect.
 
 ## Usage
 
@@ -28,6 +28,14 @@ Simply run the bash script:
 
 ```
 bash sshpi.sh
+```
+
+You can copy this script to PATH, if you want a command named `sshpi`:
+
+```
+sudo cp sshpi.sh /usr/bin/sshpi
+sudo chmod +x /usr/bin/sshpi
+sshpi
 ```
 
 ### Python
