@@ -1,8 +1,12 @@
 # one-liner-SSH-to-Raspberry-Pi
 
-SSH into your Raspberry Pi from anywhere with just one command.
+SSH into your Weaved connected Raspberry Pi with one command.
 
-Adapted from http://docs.weaved.com/docs/userlogin and http://docs.weaved.com/docs/deviceconnect.
+Adapted from [userlogin](http://docs.weaved.com/docs/userlogin) and [deviceconnect](http://docs.weaved.com/docs/deviceconnect).
+
+## Screenshots
+
+<img src="http://i.imgur.com/CnPL0Rr.png" width="290">
 
 ## Usage
 
