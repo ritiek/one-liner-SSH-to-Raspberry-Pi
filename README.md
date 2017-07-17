@@ -6,7 +6,7 @@ Adapted from [userlogin](http://docs.weaved.com/docs/userlogin) and [deviceconne
 
 ## Screenshots
 
-<img src="http://i.imgur.com/CnPL0Rr.png" width="290">
+<img src="http://i.imgur.com/CnPL0Rr.png" width="700">
 
 ## Usage
 
