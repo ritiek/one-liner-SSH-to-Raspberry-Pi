@@ -6,7 +6,7 @@ Adapted from [userlogin](http://docs.weaved.com/docs/userlogin) and [deviceconne
 
 ## Screenshots
 
-<img src="http://i.imgur.com/CnPL0Rr.png" width="700">
+<img src="http://i.imgur.com/Jeqsyti.png" width="700">
 
 ## Installation
 
@@ -27,13 +27,13 @@ Here `00:00:00:01:00:00:A1:1A` is your UID
 
 ## Usage
 
-Simply pass the bash script with -p option as hostname:
+Simply pass the bash script with `-p` option as hostname:
 
 ```
 ssh pi@$(bash sshpi.sh -p)
 ```
 
-It can also be used in other tools that require use of SSH like [sshuttle](https://github.com/apenwarr/sshuttle).
+It can also be used in other tools that require use of SSH like [sshuttle](https://github.com/apenwarr/sshuttle) that do not use the `-p` option.
 
 ```
 sshuttle -r pi@$(bash sshpi.sh) 0.0.0.0/0
