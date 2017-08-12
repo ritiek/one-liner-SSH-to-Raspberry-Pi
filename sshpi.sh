@@ -15,4 +15,8 @@ HTTP_HOST=${HTTP_HOST#"http://"}
 HOST=$(echo $HTTP_HOST | cut -d':' -f 1)
 PORT=$(echo $HTTP_HOST | cut -d':' -f 2)
 
-ssh pi@$HOST -p $PORT
+if [ "$#" -ne 1 ]; then
+    echo $HOST:$PORT
+else    
+    echo $HOST -p $PORT
+fi
