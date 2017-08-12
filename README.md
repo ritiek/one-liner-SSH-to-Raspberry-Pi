@@ -39,7 +39,7 @@ It can also be used in other tools that require use of SSH like [sshuttle](https
 sshuttle -r pi@$(bash sshpi.sh) 0.0.0.0/0
 ```
 
-## Options
+### Options
 
 The tool takes `-p` as optional parameter to generate the address by passing the port number to `-p` option:
 
@@ -57,7 +57,7 @@ proxyaddress:proxyport
 
 This option may be useful to you depending on how you want to pass the SSH address as different tools use one of it as a preference.
 
-## Add to PATH
+### Add to PATH
 
 You can copy this script to PATH, if you want a command named `sshpi`:
 
@@ -84,4 +84,8 @@ It will automatically SSH into your Pi after generating a token and fetching Wea
 
 It just makes use of the Weaved API.
 
-More info on their API here http://docs.weaved.com/
+More info on their API here http://docs.weaved.com/.
+
+## License
+
+`The MIT License`
