@@ -36,7 +36,7 @@ ssh pi@$(bash sshpi.sh -p)
 It can also be used in other tools that require use of SSH like [sshuttle](https://github.com/apenwarr/sshuttle).
 
 ```
-sshuttle -r pi@$(sshpi) 0.0.0.0/0
+sshuttle -r pi@$(bash sshpi.sh) 0.0.0.0/0
 ```
 
 ## Options
@@ -64,7 +64,18 @@ You can copy this script to PATH, if you want a command named `sshpi`:
 ```
 sudo cp sshpi.sh /usr/bin/sshpi
 sudo chmod +x /usr/bin/sshpi
+```
+
+Then you can just do:
+
+```
 ssh pi@$(sshpi -p)
+```
+
+or
+
+```
+sshuttle -r pi@$(sshpi) 0.0.0.0/0
 ```
 
 It will automatically SSH into your Pi after generating a token and fetching Weaved's forwarded SSH port.
