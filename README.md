@@ -6,7 +6,7 @@ Adapted from [userlogin](http://docs.weaved.com/docs/userlogin) and [deviceconne
 
 ## Screenshots
 
-<img src="http://i.imgur.com/Jeqsyti.png" width="700">
+<img src="http://i.imgur.com/Jeqsyti.png" width="730">
 
 ## Installation
 
