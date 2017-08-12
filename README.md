@@ -8,7 +8,7 @@ Adapted from [userlogin](http://docs.weaved.com/docs/userlogin) and [deviceconne
 
 <img src="http://i.imgur.com/CnPL0Rr.png" width="700">
 
-## Usage
+## Installation
 
 You must have a Weaved account and your Pi's SSH port connected and up with Weaved.
 
@@ -25,35 +25,47 @@ You can find your UID by logging into Weaved and opening your SSH service, you w
 
 Here `00:00:00:01:00:00:A1:1A` is your UID
 
+## Usage
 
-### Bash
-
-Simply run the bash script:
+Simply pass the bash script with -p option as hostname:
 
 ```
-bash sshpi.sh
+ssh pi@$(bash sshpi.sh -p)
 ```
+
+It can also be used in other tools that require use of SSH like [sshuttle](https://github.com/apenwarr/sshuttle).
+
+```
+sshuttle -r pi@$(sshpi) 0.0.0.0/0
+```
+
+### Options
+
+The tool takes `-p` as optional parameter to generate the address by passing the port number to `-p` option:
+
+```
+$ sshpi -p
+proxyaddress -p proxyport
+```
+
+without `-p` option:
+
+```
+$ sshpi
+proxyaddress:proxyport
+```
+
+This option may be useful to you depending on how you want to pass the SSH address as different tools use one of it as a preference.
+
+## Add to PATH
 
 You can copy this script to PATH, if you want a command named `sshpi`:
 
 ```
 sudo cp sshpi.sh /usr/bin/sshpi
 sudo chmod +x /usr/bin/sshpi
-sshpi
+ssh pi@$(sshpi -p)
 ```
-
-### Python
-
-You will need httplib2:
-
-`sudo pip install -r requirements.txt`
-
-Now just run the Python script:
-
-```
-python sshpi.py
-```
-
 
 It will automatically SSH into your Pi after generating a token and fetching Weaved's forwarded SSH port.
 
