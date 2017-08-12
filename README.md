@@ -39,7 +39,7 @@ It can also be used in other tools that require use of SSH like [sshuttle](https
 sshuttle -r pi@$(sshpi) 0.0.0.0/0
 ```
 
-### Options
+## Options
 
 The tool takes `-p` as optional parameter to generate the address by passing the port number to `-p` option:
 
