@@ -15,8 +15,8 @@ You must have a Weaved account and your Pi's SSH port connected and up with Weav
 Clone this repo and cd into it:
 
 ```
-git clone https://github.com/ritiek/one-liner-SSH-to-Raspberry-Pi
-cd one-liner-SSH-to-Raspberry-Pi
+$ git clone https://github.com/ritiek/one-liner-SSH-to-Raspberry-Pi
+$ cd one-liner-SSH-to-Raspberry-Pi
 ```
 
 Now just add your weaved email, pass and your pi's UID in `sshpi.py` or `sshpi.sh` depending upon your preferred language.
@@ -30,13 +30,13 @@ Here `00:00:00:01:00:00:A1:1A` is your UID
 Simply pass the bash script with `-p` option as hostname:
 
 ```
-ssh pi@$(bash sshpi.sh -p)
+$ ssh pi@$(bash sshpi.sh -p)
 ```
 
 It can also be used in other tools that require use of SSH like [sshuttle](https://github.com/apenwarr/sshuttle) that do not use the `-p` option.
 
 ```
-sshuttle -r pi@$(bash sshpi.sh) 0.0.0.0/0
+$ sshuttle -r pi@$(bash sshpi.sh) 0.0.0.0/0
 ```
 
 ### Options
@@ -62,20 +62,20 @@ This option may be useful to you depending on how you want to pass the SSH addre
 You can copy this script to PATH, if you want a command named `sshpi`:
 
 ```
-sudo cp sshpi.sh /usr/bin/sshpi
-sudo chmod +x /usr/bin/sshpi
+$ sudo cp sshpi.sh /usr/bin/sshpi
+$ sudo chmod +x /usr/bin/sshpi
 ```
 
 Then you can just do:
 
 ```
-ssh pi@$(sshpi -p)
+$ ssh pi@$(sshpi -p)
 ```
 
 or
 
 ```
-sshuttle -r pi@$(sshpi) 0.0.0.0/0
+$ sshuttle -r pi@$(sshpi) 0.0.0.0/0
 ```
 
 It will automatically SSH into your Pi after generating a token and fetching Weaved's forwarded SSH port.
