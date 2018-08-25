@@ -17,6 +17,6 @@ PORT=$(echo $HTTP_HOST | cut -d':' -f 2)
 
 if [ "$#" -ne 1 ]; then
     echo $HOST:$PORT
-else    
+else
     echo $HOST -p $PORT
 fi

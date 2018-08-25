@@ -15,11 +15,10 @@ You must have a Weaved account and your Pi's SSH port connected and up with Weav
 Clone this repo and cd into it:
 
 ```
-$ git clone https://github.com/ritiek/one-liner-SSH-to-Raspberry-Pi
-$ cd one-liner-SSH-to-Raspberry-Pi
+$ wget https://raw.githubusercontent.com/ritiek/one-liner-SSH-to-Raspberry-Pi/master/sshpi.sh
 ```
 
-Now just add your weaved email, pass and your pi's UID in `sshpi.py` or `sshpi.sh` depending upon your preferred language.
+Now just add your weaved email, pass and your pi's UID in `sshpi.sh` depending upon your preferred language.
 
 You can find your UID by logging into Weaved and opening your SSH service, you will find a URL like https://developer.weaved.com/portal/members/viewerPage.php?id=00:00:00:01:00:00:A1:1A&type=00:1C:00:00:00:01:00:00:01:10:00:11:00:00:00:00&name=U1NIIFRlcm1pbmGd appear.
 
